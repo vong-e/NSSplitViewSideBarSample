@@ -36,6 +36,10 @@ final class WebViewContentViewController: NSViewController {
         setConstraints()
     }
     
+    deinit {
+        webView.stopLoading()
+    }
+    
     // MARK: - Configure
     private func configure() {
         webView.load(URLRequest(url: URL(string: "https://www.naver.com")!))
