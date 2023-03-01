@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		E311333D29AE7EC30091A2D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E311333C29AE7EC30091A2D8 /* AppDelegate.swift */; };
-		E311333F29AE7EC30091A2D8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E311333E29AE7EC30091A2D8 /* ViewController.swift */; };
 		E311334129AE7EC40091A2D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E311334029AE7EC40091A2D8 /* Assets.xcassets */; };
 		E311334429AE7EC40091A2D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E311334229AE7EC40091A2D8 /* Main.storyboard */; };
 		E311334F29AE7EC40091A2D8 /* NSSplitViewSideBarSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E311334E29AE7EC40091A2D8 /* NSSplitViewSideBarSampleTests.swift */; };
@@ -16,6 +15,7 @@
 		E311335B29AE7EC40091A2D8 /* NSSplitViewSideBarSampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E311335A29AE7EC40091A2D8 /* NSSplitViewSideBarSampleUITestsLaunchTests.swift */; };
 		E311336E29AF93500091A2D8 /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E311336C29AF93500091A2D8 /* MainWindowController.swift */; };
 		E311336F29AF93500091A2D8 /* MainWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E311336D29AF93500091A2D8 /* MainWindowController.xib */; };
+		E311337229AF955B0091A2D8 /* MainSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E311337129AF955B0091A2D8 /* MainSplitViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +38,6 @@
 /* Begin PBXFileReference section */
 		E311333929AE7EC30091A2D8 /* NSSplitViewSideBarSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSSplitViewSideBarSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E311333C29AE7EC30091A2D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E311333E29AE7EC30091A2D8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E311334029AE7EC40091A2D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E311334329AE7EC40091A2D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E311334529AE7EC40091A2D8 /* NSSplitViewSideBarSample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NSSplitViewSideBarSample.entitlements; sourceTree = "<group>"; };
@@ -49,6 +48,7 @@
 		E311335A29AE7EC40091A2D8 /* NSSplitViewSideBarSampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSSplitViewSideBarSampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E311336C29AF93500091A2D8 /* MainWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
 		E311336D29AF93500091A2D8 /* MainWindowController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindowController.xib; sourceTree = "<group>"; };
+		E311337129AF955B0091A2D8 /* MainSplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSplitViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,8 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				E311336929AF90C70091A2D8 /* WindowController */,
+				E311337329AF955F0091A2D8 /* ViewController */,
 				E311333C29AE7EC30091A2D8 /* AppDelegate.swift */,
-				E311333E29AE7EC30091A2D8 /* ViewController.swift */,
 				E311334029AE7EC40091A2D8 /* Assets.xcassets */,
 				E311334229AE7EC40091A2D8 /* Main.storyboard */,
 				E311334529AE7EC40091A2D8 /* NSSplitViewSideBarSample.entitlements */,
@@ -133,6 +133,14 @@
 				E311336D29AF93500091A2D8 /* MainWindowController.xib */,
 			);
 			path = WindowController;
+			sourceTree = "<group>";
+		};
+		E311337329AF955F0091A2D8 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E311337129AF955B0091A2D8 /* MainSplitViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,7 +274,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E311333F29AE7EC30091A2D8 /* ViewController.swift in Sources */,
+				E311337229AF955B0091A2D8 /* MainSplitViewController.swift in Sources */,
 				E311333D29AE7EC30091A2D8 /* AppDelegate.swift in Sources */,
 				E311336E29AF93500091A2D8 /* MainWindowController.swift in Sources */,
 			);
