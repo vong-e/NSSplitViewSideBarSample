@@ -9,12 +9,19 @@ import Cocoa
 
 final class MainWindowController: NSWindowController {
 
+    // MARK: - Initialize
     convenience init() {
         self.init(windowNibName: "MainWindowController")
     }
     
+    // MARK: - Life Cycle
     override func windowDidLoad() {
         super.windowDidLoad()
+        configure()
     }
     
+    // MARK: - Configure
+    private func configure() {
+        self.contentViewController = MainSplitViewController()
+    }
 }
