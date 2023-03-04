@@ -11,6 +11,10 @@ extension NSImage {
     static func getSideBarAppLogo(image: SideBarAppLogo) -> NSImage {
         return NSImage(named: image.rawValue)!
     }
+    
+    static func getIcon(image: IconImage) -> NSImage {
+        return NSImage(named: image.rawValue)!
+    }
 }
 
 
@@ -19,4 +23,8 @@ enum SideBarAppLogo: String {
     case webtoon = "side_bar_app_logo_webtoon"
     case memo = "side_bar_app_logo_memo"
     case timer = "side_bar_app_logo_timer"
+}
+
+enum IconImage: String {
+    case close = "ic_close"
 }
