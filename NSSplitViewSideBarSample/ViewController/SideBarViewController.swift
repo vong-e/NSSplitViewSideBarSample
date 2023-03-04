@@ -7,6 +7,10 @@
 
 import Cocoa
 
+import RxCocoa
+import RxSwift
+import SnapKit
+
 final class SideBarViewController: NSViewController {
     
     private let scrollView: NSScrollView = {
@@ -31,6 +35,9 @@ final class SideBarViewController: NSViewController {
     
     private var sideBarApplicationViewList: [SideBarApplicationView] = []
     
+    // Rx
+    private let disposeBag = DisposeBag()
+    
     // MARK: - Initialize
     init() {
         super.init(nibName: nil, bundle: nil)
@@ -51,6 +58,7 @@ final class SideBarViewController: NSViewController {
         configure()
         addSubviews()
         setConstraints()
+        binding()
     }
     
     // MARK: - Configure
@@ -86,6 +94,20 @@ final class SideBarViewController: NSViewController {
                 make.height.equalTo(30)
                 make.horizontalEdges.equalToSuperview()
             }
+        }
+    }
+    
+    // MARK: - Binding
+    private func binding() {
+        sideBarApplicationViewList.forEach { applicationView in
+            applicationView
+                .isSelectedSideBarObservable
+                .asDriver(onErrorJustReturn: (false, .memo))
+                .drive(with: self, onNext: { owner, isSelected in
+                    print("isselected: \(isSelected)")
+                    
+                })
+                .disposed(by: disposeBag)
         }
     }
 }
