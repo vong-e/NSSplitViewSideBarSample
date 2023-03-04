@@ -29,12 +29,13 @@ final class MainSplitViewController: NSSplitViewController {
     
     // MARK: - Configure
     private func configure() {
-        let webViewSplitViewItem = webViewContentVC.toSplitViewItem()
+        let webViewSplitViewItem = self.webViewContentVC.toSplitViewItem()
         self.addSplitViewItem(webViewSplitViewItem)
         
-        let sideBarSplitViewItem = sideBarVC.toSplitViewItem()
+        let sideBarSplitViewItem = self.sideBarVC.toSplitViewItem()
         self.addSplitViewItem(sideBarSplitViewItem)
-        sideBarSplitViewItem.minimumThickness = 40
+        sideBarSplitViewItem.minimumThickness = 60
+        sideBarSplitViewItem.maximumThickness = 60
     }
     
     /// Divider Size
