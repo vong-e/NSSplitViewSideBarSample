@@ -7,6 +7,8 @@
 
 import Cocoa
 
+import RxCocoa
+import RxSwift
 import SnapKit
 
 final class SideBarApplicationView: NSView {
@@ -25,10 +27,15 @@ final class SideBarApplicationView: NSView {
         let imageView = NSImageView()
         return imageView
     }()
-
-    private var isSelected: Bool = false
     
     private var application: SideBarApplication
+    
+    // Rx
+    private let disposeBag = DisposeBag()
+    var isSelectedSideBarObservable: Observable<(Bool, SideBarApplication)> {
+        return Observable.combineLatest(isSelectedRelay.asObservable(), Observable.just(application))
+    }
+    private var isSelectedRelay = BehaviorRelay<Bool>(value: false)
     
     init(application: SideBarApplication) {
         self.application = application
@@ -74,11 +81,13 @@ final class SideBarApplicationView: NSView {
     }
     
     private func setSelectedUI() {
-        
+        toggleEffectContainerBox.fillColor = .getBackground(color: .light)
+        toggleEffectLineBox.fillColor = .getPoint(color: .primary)
     }
+    
     private func setDeselectedUI() {
-//        toggleEffectContainerBox.fillColor = .
-//        toggleEffectLineBox.fillColor = .clear
+        toggleEffectContainerBox.fillColor = .clear
+        toggleEffectLineBox.fillColor = .clear
     }
 }
 
@@ -86,6 +95,7 @@ final class SideBarApplicationView: NSView {
 extension SideBarApplicationView {
     override func mouseDown(with event: NSEvent) {
         print("mouse down")
+        isSelectedRelay.accept(!isSelectedRelay.value)
     }
     override func mouseEntered(with event: NSEvent) {
 //        if isEnabled {
