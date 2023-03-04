@@ -31,6 +31,7 @@
 		E367A33229B3816900848482 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = E367A33129B3816900848482 /* RxCocoa */; };
 		E367A33429B3816900848482 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = E367A33329B3816900848482 /* RxRelay */; };
 		E367A33629B3816900848482 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E367A33529B3816900848482 /* RxSwift */; };
+		E39C1B9A29B3A34500337BBD /* SideBarApplicationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39C1B9929B3A34500337BBD /* SideBarApplicationViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		E367A32329B3717200848482 /* NSView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSView+Extension.swift"; sourceTree = "<group>"; };
 		E367A32529B37DE100848482 /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
 		E367A32729B37F7C00848482 /* NSColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSColor+Extension.swift"; sourceTree = "<group>"; };
+		E39C1B9929B3A34500337BBD /* SideBarApplicationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarApplicationViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 				E311336929AF90C70091A2D8 /* WindowController */,
 				E311337329AF955F0091A2D8 /* ViewController */,
 				E367A32029B2806A00848482 /* View */,
+				E39C1B9829B3A32100337BBD /* ViewModel */,
 				E367A31A29B26FC900848482 /* Model */,
 				E311337B29AFC6990091A2D8 /* Extension */,
 				E311333C29AE7EC30091A2D8 /* AppDelegate.swift */,
@@ -206,6 +209,14 @@
 				E367A32129B36FF600848482 /* SideBarApplicationView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		E39C1B9829B3A32100337BBD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E39C1B9929B3A34500337BBD /* SideBarApplicationViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -358,6 +369,7 @@
 				E311338729AFD7070091A2D8 /* SideBarViewController.swift in Sources */,
 				E367A32429B3717200848482 /* NSView+Extension.swift in Sources */,
 				E311338329AFCA6B0091A2D8 /* WebViewContentViewController.swift in Sources */,
+				E39C1B9A29B3A34500337BBD /* SideBarApplicationViewModel.swift in Sources */,
 				E311333D29AE7EC30091A2D8 /* AppDelegate.swift in Sources */,
 				E311338129AFCA200091A2D8 /* NSBox+Extension.swift in Sources */,
 				E367A31F29B2806100848482 /* FlippedClipView.swift in Sources */,
