@@ -2,53 +2,21 @@
 //  SideBarApplication.swift
 //  NSSplitViewSideBarSample
 //
-//  Created by vongvorovongvong on 2023/03/04.
+//  Created by vongvorovongvong on 2023/03/05.
 //
 
 import AppKit
 
-enum SideBarApplication: CaseIterable {
-    case translate
-    case webtoon
-    case memo
-    case timer
+struct SideBarApplication {
+    var id: Int
+    var title: String
+    var logo: NSImage
+    var backgroundColor: NSColor
     
-    var backgroundColor: NSColor {
-        switch self {
-        case .translate:
-            return .blue
-        case .webtoon:
-            return .green
-        case .memo:
-            return .yellow
-        case .timer:
-            return .gray
-        }
-    }
-    
-    var title: String {
-        switch self {
-        case .translate:
-            return "번역"
-        case .webtoon:
-            return "웹툰"
-        case .memo:
-            return "메모"
-        case .timer:
-            return "타이머"
-        }
-    }
-    
-    var logo: NSImage {
-        switch self {
-        case .translate:
-            return .getSideBarAppLogo(image: .translate)
-        case .webtoon:
-            return .getSideBarAppLogo(image: .webtoon)
-        case .memo:
-            return .getSideBarAppLogo(image: .memo)
-        case .timer:
-            return .getSideBarAppLogo(image: .timer)
-        }
+    init(id: Int, title: String, logo: NSImage, backgroundColor: NSColor) {
+        self.id = id
+        self.title = title
+        self.logo = logo
+        self.backgroundColor = backgroundColor
     }
 }
