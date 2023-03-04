@@ -14,6 +14,7 @@ final class MainSplitViewController: NSSplitViewController {
     
     private let webViewContentVC = WebViewContentViewController()
     private let sideBarVC = SideBarViewController()
+    private var sideBarApplicaitonVC: SideBarApplicationViewController?
     
     // MARK: - Initialize
     init() {
@@ -31,6 +32,7 @@ final class MainSplitViewController: NSSplitViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
+        setConstraints()
         binding()
     }
     
@@ -41,8 +43,14 @@ final class MainSplitViewController: NSSplitViewController {
         
         let sideBarSplitViewItem = self.sideBarVC.toSplitViewItem()
         self.addSplitViewItem(sideBarSplitViewItem)
-        sideBarSplitViewItem.minimumThickness = 60
-        sideBarSplitViewItem.maximumThickness = 60
+    }
+    
+    // MARK: - Set UI
+    private func setConstraints() {
+        self.view.snp.makeConstraints { make in
+            make.width.greaterThanOrEqualTo(500)
+            make.height.greaterThanOrEqualTo(350)
+        }
     }
     
     // MARK: - Binding
@@ -52,13 +60,75 @@ final class MainSplitViewController: NSSplitViewController {
             .asDriver(onErrorJustReturn: nil)
             .drive(with: self,
                    onNext: { owner, selectedID in
-                print("SELECTED ID: \(String(describing: selectedID))")
+                owner.addSideBarApplicationPanel(of: selectedID)
             })
             .disposed(by: disposeBag)
     }
     
+    private func addSideBarApplicationPanel(of id: SideBarApplicationID?) {
+        guard let sideBarApplication = SideBarApplicaitonHelper.shared.getSideBarApplicaitonInfo(of: id) else {
+            self.removeSideBarApplicaitonPanel(animate: true)
+            return
+        }
+        
+        removeSideBarApplicaitonPanel(animate: false)
+        
+        let sideBarApplicationViewController = SideBarApplicationViewController(application: sideBarApplication)
+        sideBarApplicationViewController.view.setFrameSize(.init(width: 300, height: self.view.frame.height))
+        self.sideBarApplicaitonVC = sideBarApplicationViewController
+
+        let sideBarApplicationVCItem = sideBarApplicationViewController.toSplitViewItem()
+        sideBarApplicationVCItem.minimumThickness = 300
+        print("sideBarApplicationVCItem ", sideBarApplicationVCItem.viewController.view.frame)
+        self.insertSplitViewItem(sideBarApplicationVCItem, at: 1)
+        
+        let sideBarApplicationWidth: CGFloat = DBService.getSideBarApplicationWidth(of: sideBarApplication.id)
+        let sideBarVCWidth: CGFloat = 60
+        let dividerWidth: CGFloat = 2 // divier 2개의 최소 width 1씩
+        let windowFrame: NSRect = self.view.window?.frame ?? .zero
+
+        if windowFrame.width < sideBarApplicationWidth + sideBarVCWidth + dividerWidth {
+            self.view.window?.setFrame(.init(origin: windowFrame.origin, size: .init(width: sideBarApplicationWidth + sideBarVCWidth + dividerWidth, height: windowFrame.height)), display: true)
+            splitView.setPosition(0, ofDividerAt: 0)
+        } else {
+            let position: CGFloat = windowFrame.width - sideBarApplicationWidth - sideBarVCWidth - dividerWidth
+            splitView.setPosition(position, ofDividerAt: 0)
+        }
+    }
+    
+    private func removeSideBarApplicaitonPanel(animate: Bool) {
+        guard let sideBarApplicationVCItem = self.splitViewItems.first(where: { $0.viewController.isKind(of: SideBarApplicationViewController.self) }) else {
+            return
+        }
+        
+        if animate {
+            NSAnimationContext.runAnimationGroup ({ context in
+                sideBarApplicationVCItem.animator().isCollapsed = true
+            }, completionHandler: {
+                self.removeSplitViewItem(sideBarApplicationVCItem)
+                self.sideBarApplicaitonVC = nil
+            })
+        } else {
+            self.removeSplitViewItem(sideBarApplicationVCItem)
+            self.sideBarApplicaitonVC = nil
+        }
+    }
+    
     /// Divider Size
     override func splitView(_ splitView: NSSplitView, effectiveRect proposedEffectiveRect: NSRect, forDrawnRect drawnRect: NSRect, ofDividerAt dividerIndex: Int) -> NSRect {
-        return NSRect.zero
+        var sideBarDividerIndex: Int {
+            if sideBarApplicaitonVC == nil {
+                return 0
+            } else {
+                return 1
+            }
+        }
+        
+        
+        if dividerIndex == sideBarDividerIndex {
+            /// SideBar divier는 선택하지 못하도록 함
+            return .zero
+        }
+        return proposedEffectiveRect
     }
 }

@@ -21,10 +21,10 @@ final class SideBarApplicaitonHelper {
     }
     private var sideBarApplicationListRelay = BehaviorRelay<[SideBarApplication]>(value: [])
     
-    var selectedApplicationIDObservable: Observable<Int?> {
+    var selectedApplicationIDObservable: Observable<SideBarApplicationID?> {
         return selectedApplicationIDRelay.asObservable()
     }
-    private var selectedApplicationIDRelay = BehaviorRelay<Int?>(value: nil)
+    private var selectedApplicationIDRelay = BehaviorRelay<SideBarApplicationID?>(value: nil)
     
     private init() {
         configure()
@@ -41,11 +41,18 @@ final class SideBarApplicaitonHelper {
     /// - Parameters:
     ///   - selected: SideBar applicaiton의 선택 여부
     ///   - id: SideBar applicaiton의 ID
-    func setApplication(selected: Bool, id: Int) {
+    func setApplication(selected: Bool, id: SideBarApplicationID) {
         if selectedApplicationIDRelay.value == id {
             selectedApplicationIDRelay.accept(nil)
         } else {
             selectedApplicationIDRelay.accept(id)
         }
+    }
+    
+    /// SideBarApplicaiton 을 가져옴
+    /// - Parameter id: 가져올 side bar applicaiton의 ID
+    /// - Returns: SideBar applicaiton 정보
+    func getSideBarApplicaitonInfo(of id: SideBarApplicationID?) -> SideBarApplication? {
+        return self.sideBarApplicationListRelay.value.first(where: { $0.id == id })
     }
 }

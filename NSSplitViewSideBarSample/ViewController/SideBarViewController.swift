@@ -67,6 +67,9 @@ final class SideBarViewController: NSViewController {
     }
     
     private func setConstraints() {
+        self.view.snp.makeConstraints { make in
+            make.width.equalTo(60)
+        }
         scrollView.snp.makeConstraints { make in
             make.verticalEdges.equalToSuperview().inset(8)
             make.horizontalEdges.equalToSuperview()
