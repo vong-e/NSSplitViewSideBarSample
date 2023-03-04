@@ -26,6 +26,7 @@
 		E367A31F29B2806100848482 /* FlippedClipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E367A31E29B2806100848482 /* FlippedClipView.swift */; };
 		E367A32229B36FF600848482 /* SideBarApplicationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E367A32129B36FF600848482 /* SideBarApplicationView.swift */; };
 		E367A32429B3717200848482 /* NSView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E367A32329B3717200848482 /* NSView+Extension.swift */; };
+		E367A32629B37DE100848482 /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E367A32529B37DE100848482 /* Color.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		E367A31E29B2806100848482 /* FlippedClipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlippedClipView.swift; sourceTree = "<group>"; };
 		E367A32129B36FF600848482 /* SideBarApplicationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarApplicationView.swift; sourceTree = "<group>"; };
 		E367A32329B3717200848482 /* NSView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSView+Extension.swift"; sourceTree = "<group>"; };
+		E367A32529B37DE100848482 /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 				E311337B29AFC6990091A2D8 /* Extension */,
 				E311333C29AE7EC30091A2D8 /* AppDelegate.swift */,
 				E311334029AE7EC40091A2D8 /* Assets.xcassets */,
+				E367A32529B37DE100848482 /* Color.xcassets */,
 				E311334229AE7EC40091A2D8 /* Main.storyboard */,
 				E311334529AE7EC40091A2D8 /* NSSplitViewSideBarSample.entitlements */,
 			);
@@ -307,6 +310,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E311334129AE7EC40091A2D8 /* Assets.xcassets in Resources */,
+				E367A32629B37DE100848482 /* Color.xcassets in Resources */,
 				E311336F29AF93500091A2D8 /* MainWindowController.xib in Resources */,
 				E311334429AE7EC40091A2D8 /* Main.storyboard in Resources */,
 			);
