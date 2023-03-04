@@ -14,26 +14,25 @@ import SnapKit
 final class SideBarViewController: NSViewController {
     
     private let scrollView: NSScrollView = {
-       let scrollView = NSScrollView()
+        let scrollView = NSScrollView()
         return scrollView
     }()
     
     private let flippedClipView: FlippedClipView = {
         let flippedClipView = FlippedClipView()
         flippedClipView.translatesAutoresizingMaskIntoConstraints = false
+        flippedClipView.backgroundColor = .getBackground(color: .base)
         return flippedClipView
     }()
     
     private let sideBarAppStackView: NSStackView = {
         let stackView = NSStackView()
         stackView.orientation = .vertical
-        stackView.alignment = .centerX
-        stackView.distribution = .equalSpacing
+        stackView.alignment = .leading
+        stackView.distribution = .fill
         stackView.spacing = 10
         return stackView
     }()
-    
-    private var sideBarApplicationViewList: [SideBarApplicationView] = []
     
     // Rx
     private let disposeBag = DisposeBag()
@@ -49,24 +48,15 @@ final class SideBarViewController: NSViewController {
     
     // MARK: - Life Cycle
     override func loadView() {
-        let box = NSBox(fillColor: .clear)
+        let box = NSBox(fillColor: .getBackground(color: .base))
         self.view = box
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configure()
         addSubviews()
         setConstraints()
         binding()
-    }
-    
-    // MARK: - Configure
-    private func configure() {
-        SideBarApplication.allCases.forEach { application in
-            let sidebarApplicationView = SideBarApplicationView(application: application)
-            sideBarApplicationViewList.append(sidebarApplicationView)
-        }
     }
     
     // MARK: - Set UI
@@ -74,23 +64,28 @@ final class SideBarViewController: NSViewController {
         self.view.addSubview(scrollView)
         scrollView.contentView = flippedClipView
         scrollView.documentView = sideBarAppStackView
-        
-        sideBarApplicationViewList.forEach { applicationView in
-            sideBarAppStackView.addArrangedSubview(applicationView)
-        }
     }
     
     private func setConstraints() {
         scrollView.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
+            make.verticalEdges.equalToSuperview().inset(8)
+            make.horizontalEdges.equalToSuperview()
         }
         
         sideBarAppStackView.snp.makeConstraints { make in
             make.width.equalTo(scrollView.snp.width)
         }
         
-        sideBarApplicationViewList.forEach { applicationView in
-            applicationView.snp.makeConstraints { make in
+    }
+    
+    private func setSideBar(applicaitonList: [SideBarApplication]) {
+        sideBarAppStackView.subviews.removeAll()
+        
+        applicaitonList.forEach { application in
+            let sideBarApplicationView = SideBarApplicationView(application: application)
+            sideBarAppStackView.addArrangedSubview(sideBarApplicationView)
+            
+            sideBarApplicationView.snp.makeConstraints { make in
                 make.height.equalTo(30)
                 make.horizontalEdges.equalToSuperview()
             }
@@ -99,15 +94,13 @@ final class SideBarViewController: NSViewController {
     
     // MARK: - Binding
     private func binding() {
-        sideBarApplicationViewList.forEach { applicationView in
-            applicationView
-                .isSelectedSideBarObservable
-                .asDriver(onErrorJustReturn: (false, .memo))
-                .drive(with: self, onNext: { owner, isSelected in
-                    print("isselected: \(isSelected)")
-                    
-                })
-                .disposed(by: disposeBag)
-        }
+        SideBarApplicaitonHelper.shared
+            .sideBarApplicaitonListObservable
+            .asDriver(onErrorJustReturn: [])
+            .drive(with: self,
+                   onNext: { owner, applicationList in
+                owner.setSideBar(applicaitonList: applicationList)
+            })
+            .disposed(by: disposeBag)
     }
 }

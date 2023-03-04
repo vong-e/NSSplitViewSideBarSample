@@ -55,4 +55,8 @@ enum SideBarApplicationMockData: Int, CaseIterable {
             return .getSideBarAppLogo(image: .timer)
         }
     }
+    
+    func getSideBarApplication() -> SideBarApplication {
+        return .init(id: self.id, title: self.title, logo: self.logo, backgroundColor: self.backgroundColor)
+    }
 }

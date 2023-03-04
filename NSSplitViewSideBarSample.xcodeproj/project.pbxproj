@@ -32,6 +32,9 @@
 		E367A33429B3816900848482 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = E367A33329B3816900848482 /* RxRelay */; };
 		E367A33629B3816900848482 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E367A33529B3816900848482 /* RxSwift */; };
 		E39C1B9C29B3A7E200337BBD /* SideBarApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39C1B9B29B3A7E200337BBD /* SideBarApplication.swift */; };
+		E39C1BA229B3C16800337BBD /* DBService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39C1BA129B3C16800337BBD /* DBService.swift */; };
+		E39C1BA529B3C56500337BBD /* SideBarApplicaitonHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39C1BA429B3C56500337BBD /* SideBarApplicaitonHelper.swift */; };
+		E39C1BA729B3C9CF00337BBD /* Rx+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39C1BA629B3C9CF00337BBD /* Rx+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +80,9 @@
 		E367A32529B37DE100848482 /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
 		E367A32729B37F7C00848482 /* NSColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSColor+Extension.swift"; sourceTree = "<group>"; };
 		E39C1B9B29B3A7E200337BBD /* SideBarApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarApplication.swift; sourceTree = "<group>"; };
+		E39C1BA129B3C16800337BBD /* DBService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBService.swift; sourceTree = "<group>"; };
+		E39C1BA429B3C56500337BBD /* SideBarApplicaitonHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarApplicaitonHelper.swift; sourceTree = "<group>"; };
+		E39C1BA629B3C9CF00337BBD /* Rx+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rx+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +137,8 @@
 		E311333B29AE7EC30091A2D8 /* NSSplitViewSideBarSample */ = {
 			isa = PBXGroup;
 			children = (
+				E39C1BA329B3C55500337BBD /* Helper */,
+				E39C1BA029B3C15500337BBD /* Service */,
 				E311336929AF90C70091A2D8 /* WindowController */,
 				E311337329AF955F0091A2D8 /* ViewController */,
 				E367A32029B2806A00848482 /* View */,
@@ -190,6 +198,7 @@
 				E367A31829B239DD00848482 /* NSImage+Extension.swift */,
 				E367A32329B3717200848482 /* NSView+Extension.swift */,
 				E367A32729B37F7C00848482 /* NSColor+Extension.swift */,
+				E39C1BA629B3C9CF00337BBD /* Rx+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -217,6 +226,22 @@
 				E367A31B29B26FD700848482 /* SideBarApplicationMockData.swift */,
 			);
 			path = Mock;
+			sourceTree = "<group>";
+		};
+		E39C1BA029B3C15500337BBD /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				E39C1BA129B3C16800337BBD /* DBService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		E39C1BA329B3C55500337BBD /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				E39C1BA429B3C56500337BBD /* SideBarApplicaitonHelper.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -362,17 +387,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				E311337D29AFC6AE0091A2D8 /* NSViewController+Extension.swift in Sources */,
+				E39C1BA229B3C16800337BBD /* DBService.swift in Sources */,
 				E311337229AF955B0091A2D8 /* MainSplitViewController.swift in Sources */,
 				E367A32829B37F7C00848482 /* NSColor+Extension.swift in Sources */,
 				E367A32229B36FF600848482 /* SideBarApplicationView.swift in Sources */,
 				E39C1B9C29B3A7E200337BBD /* SideBarApplication.swift in Sources */,
 				E367A31C29B26FD700848482 /* SideBarApplicationMockData.swift in Sources */,
+				E39C1BA529B3C56500337BBD /* SideBarApplicaitonHelper.swift in Sources */,
 				E311338729AFD7070091A2D8 /* SideBarViewController.swift in Sources */,
 				E367A32429B3717200848482 /* NSView+Extension.swift in Sources */,
 				E311338329AFCA6B0091A2D8 /* WebViewContentViewController.swift in Sources */,
 				E311333D29AE7EC30091A2D8 /* AppDelegate.swift in Sources */,
 				E311338129AFCA200091A2D8 /* NSBox+Extension.swift in Sources */,
 				E367A31F29B2806100848482 /* FlippedClipView.swift in Sources */,
+				E39C1BA729B3C9CF00337BBD /* Rx+Extension.swift in Sources */,
 				E367A31929B239DD00848482 /* NSImage+Extension.swift in Sources */,
 				E311336E29AF93500091A2D8 /* MainWindowController.swift in Sources */,
 			);

@@ -7,7 +7,7 @@
 
 import AppKit
 
-struct SideBarApplication {
+struct SideBarApplication: Equatable {
     var id: Int
     var title: String
     var logo: NSImage

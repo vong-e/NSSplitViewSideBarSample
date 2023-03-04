@@ -28,20 +28,19 @@ final class SideBarApplicationView: NSView {
         return imageView
     }()
     
+    private var isSelected: Bool = false
     private var application: SideBarApplication
     
     // Rx
-    private let disposeBag = DisposeBag()
-    var isSelectedSideBarObservable: Observable<(Bool, SideBarApplication)> {
-        return Observable.combineLatest(isSelectedRelay.asObservable(), Observable.just(application))
-    }
-    private var isSelectedRelay = BehaviorRelay<Bool>(value: false)
+    private let disposeBag = DisposeBag()    
     
     init(application: SideBarApplication) {
         self.application = application
         super.init(frame: .zero)
+        configure()
         addSubviews()
         setConstraints()
+        binding()
         self.setTrackingArea()
     }
     
@@ -65,7 +64,7 @@ final class SideBarApplicationView: NSView {
     private func setConstraints() {
         toggleEffectContainerBox.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
-            make.width.equalTo(40)
+            make.width.equalTo(26)
             make.verticalEdges.equalToSuperview()
         }
         
@@ -77,35 +76,80 @@ final class SideBarApplicationView: NSView {
         
         applicationLogoImageView.snp.makeConstraints { make in
             make.center.equalToSuperview()
+            make.width.height.equalTo(18)
         }
     }
     
     private func setSelectedUI() {
         toggleEffectContainerBox.fillColor = .getBackground(color: .light)
         toggleEffectLineBox.fillColor = .getPoint(color: .primary)
+        applicationLogoImageView.image = .getIcon(image: .close)
     }
     
     private func setDeselectedUI() {
         toggleEffectContainerBox.fillColor = .clear
         toggleEffectLineBox.fillColor = .clear
+        applicationLogoImageView.image = application.logo
+    }
+    
+    // MARK: - Binding
+    private func binding() {
+        SideBarApplicaitonHelper.shared
+            .selectedApplicationIDObservable
+            .asDriver(onErrorJustReturn: nil)
+            .drive(with: self,
+                   onNext: { owner, selectedID in
+                if owner.application.id == selectedID {
+                    owner.setSelectedUI()
+                } else {
+                    owner.setDeselectedUI()
+                }
+            })
+            .disposed(by: disposeBag)
     }
 }
 
 // MARK: - Mouse Event Tracking
 extension SideBarApplicationView {
     override func mouseDown(with event: NSEvent) {
-        print("mouse down")
-        isSelectedRelay.accept(!isSelectedRelay.value)
+        isSelected = !isSelected
+        SideBarApplicaitonHelper.shared.setApplication(selected: isSelected, id: application.id)
+        
     }
     override func mouseEntered(with event: NSEvent) {
-//        if isEnabled {
-//            NSCursor.pointingHand.set()
-//        } else {
-//            NSCursor.arrow.set()
-//        }
+        setMouseEnteredUI()
     }
     
     override func mouseExited(with event: NSEvent) {
-//        NSCursor.arrow.set()
+        setMouseExitedUI()
+    }
+    
+    private func setMouseEnteredUI() {
+        NSCursor.pointingHand.set()
+        setApplicationLogoImage(size: 22)
+        
+        if isSelected {
+            applicationLogoImageView.image = .getIcon(image: .close)
+        } else {
+            applicationLogoImageView.image = application.logo
+        }
+    }
+    
+    private func setMouseExitedUI() {
+        NSCursor.arrow.set()
+        applicationLogoImageView.image = application.logo
+        
+        if isSelected {
+            setApplicationLogoImage(size: 22)
+        } else {
+            setApplicationLogoImage(size: 18)
+        }
+    }
+    
+    private func setApplicationLogoImage(size: CGFloat) {
+        applicationLogoImageView.snp.remakeConstraints { make in
+            make.center.equalToSuperview()
+            make.width.height.equalTo(size)
+        }
     }
 }

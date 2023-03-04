@@ -7,6 +7,9 @@
 
 import Cocoa
 
+import RxCocoa
+import RxSwift
+
 final class MainSplitViewController: NSSplitViewController {
     
     private let webViewContentVC = WebViewContentViewController()
@@ -21,10 +24,14 @@ final class MainSplitViewController: NSSplitViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // Rx
+    private let disposeBag = DisposeBag()
+    
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
+        binding()
     }
     
     // MARK: - Configure
@@ -36,6 +43,18 @@ final class MainSplitViewController: NSSplitViewController {
         self.addSplitViewItem(sideBarSplitViewItem)
         sideBarSplitViewItem.minimumThickness = 60
         sideBarSplitViewItem.maximumThickness = 60
+    }
+    
+    // MARK: - Binding
+    private func binding() {
+        SideBarApplicaitonHelper.shared
+            .selectedApplicationIDObservable
+            .asDriver(onErrorJustReturn: nil)
+            .drive(with: self,
+                   onNext: { owner, selectedID in
+                print("SELECTED ID: \(String(describing: selectedID))")
+            })
+            .disposed(by: disposeBag)
     }
     
     /// Divider Size
