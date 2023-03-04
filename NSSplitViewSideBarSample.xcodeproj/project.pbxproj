@@ -22,7 +22,7 @@
 		E311338329AFCA6B0091A2D8 /* WebViewContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E311338229AFCA6B0091A2D8 /* WebViewContentViewController.swift */; };
 		E311338729AFD7070091A2D8 /* SideBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E311338629AFD7070091A2D8 /* SideBarViewController.swift */; };
 		E367A31929B239DD00848482 /* NSImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E367A31829B239DD00848482 /* NSImage+Extension.swift */; };
-		E367A31C29B26FD700848482 /* SideBarApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = E367A31B29B26FD700848482 /* SideBarApplication.swift */; };
+		E367A31C29B26FD700848482 /* SideBarApplicationMockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E367A31B29B26FD700848482 /* SideBarApplicationMockData.swift */; };
 		E367A31F29B2806100848482 /* FlippedClipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E367A31E29B2806100848482 /* FlippedClipView.swift */; };
 		E367A32229B36FF600848482 /* SideBarApplicationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E367A32129B36FF600848482 /* SideBarApplicationView.swift */; };
 		E367A32429B3717200848482 /* NSView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E367A32329B3717200848482 /* NSView+Extension.swift */; };
@@ -31,7 +31,7 @@
 		E367A33229B3816900848482 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = E367A33129B3816900848482 /* RxCocoa */; };
 		E367A33429B3816900848482 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = E367A33329B3816900848482 /* RxRelay */; };
 		E367A33629B3816900848482 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E367A33529B3816900848482 /* RxSwift */; };
-		E39C1B9A29B3A34500337BBD /* SideBarApplicationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39C1B9929B3A34500337BBD /* SideBarApplicationViewModel.swift */; };
+		E39C1B9C29B3A7E200337BBD /* SideBarApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39C1B9B29B3A7E200337BBD /* SideBarApplication.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,13 +70,13 @@
 		E311338229AFCA6B0091A2D8 /* WebViewContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewContentViewController.swift; sourceTree = "<group>"; };
 		E311338629AFD7070091A2D8 /* SideBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarViewController.swift; sourceTree = "<group>"; };
 		E367A31829B239DD00848482 /* NSImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSImage+Extension.swift"; sourceTree = "<group>"; };
-		E367A31B29B26FD700848482 /* SideBarApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarApplication.swift; sourceTree = "<group>"; };
+		E367A31B29B26FD700848482 /* SideBarApplicationMockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarApplicationMockData.swift; sourceTree = "<group>"; };
 		E367A31E29B2806100848482 /* FlippedClipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlippedClipView.swift; sourceTree = "<group>"; };
 		E367A32129B36FF600848482 /* SideBarApplicationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarApplicationView.swift; sourceTree = "<group>"; };
 		E367A32329B3717200848482 /* NSView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSView+Extension.swift"; sourceTree = "<group>"; };
 		E367A32529B37DE100848482 /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
 		E367A32729B37F7C00848482 /* NSColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSColor+Extension.swift"; sourceTree = "<group>"; };
-		E39C1B9929B3A34500337BBD /* SideBarApplicationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarApplicationViewModel.swift; sourceTree = "<group>"; };
+		E39C1B9B29B3A7E200337BBD /* SideBarApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarApplication.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,8 +134,8 @@
 				E311336929AF90C70091A2D8 /* WindowController */,
 				E311337329AF955F0091A2D8 /* ViewController */,
 				E367A32029B2806A00848482 /* View */,
-				E39C1B9829B3A32100337BBD /* ViewModel */,
 				E367A31A29B26FC900848482 /* Model */,
+				E39C1B9D29B3A7EC00337BBD /* Mock */,
 				E311337B29AFC6990091A2D8 /* Extension */,
 				E311333C29AE7EC30091A2D8 /* AppDelegate.swift */,
 				E311334029AE7EC40091A2D8 /* Assets.xcassets */,
@@ -197,7 +197,7 @@
 		E367A31A29B26FC900848482 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				E367A31B29B26FD700848482 /* SideBarApplication.swift */,
+				E39C1B9B29B3A7E200337BBD /* SideBarApplication.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -211,12 +211,12 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		E39C1B9829B3A32100337BBD /* ViewModel */ = {
+		E39C1B9D29B3A7EC00337BBD /* Mock */ = {
 			isa = PBXGroup;
 			children = (
-				E39C1B9929B3A34500337BBD /* SideBarApplicationViewModel.swift */,
+				E367A31B29B26FD700848482 /* SideBarApplicationMockData.swift */,
 			);
-			path = ViewModel;
+			path = Mock;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -365,11 +365,11 @@
 				E311337229AF955B0091A2D8 /* MainSplitViewController.swift in Sources */,
 				E367A32829B37F7C00848482 /* NSColor+Extension.swift in Sources */,
 				E367A32229B36FF600848482 /* SideBarApplicationView.swift in Sources */,
-				E367A31C29B26FD700848482 /* SideBarApplication.swift in Sources */,
+				E39C1B9C29B3A7E200337BBD /* SideBarApplication.swift in Sources */,
+				E367A31C29B26FD700848482 /* SideBarApplicationMockData.swift in Sources */,
 				E311338729AFD7070091A2D8 /* SideBarViewController.swift in Sources */,
 				E367A32429B3717200848482 /* NSView+Extension.swift in Sources */,
 				E311338329AFCA6B0091A2D8 /* WebViewContentViewController.swift in Sources */,
-				E39C1B9A29B3A34500337BBD /* SideBarApplicationViewModel.swift in Sources */,
 				E311333D29AE7EC30091A2D8 /* AppDelegate.swift in Sources */,
 				E311338129AFCA200091A2D8 /* NSBox+Extension.swift in Sources */,
 				E367A31F29B2806100848482 /* FlippedClipView.swift in Sources */,
