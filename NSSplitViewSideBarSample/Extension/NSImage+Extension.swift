@@ -15,6 +15,10 @@ extension NSImage {
     static func getIcon(image: IconImage) -> NSImage {
         return NSImage(named: image.rawValue)!
     }
+    
+    static func getStatusBar(image: StatusBarImage) -> NSImage {
+        return NSImage(named: image.rawValue)!
+    }
 }
 
 
@@ -27,4 +31,8 @@ enum SideBarAppLogo: String {
 
 enum IconImage: String {
     case close = "ic_close"
+}
+
+enum StatusBarImage: String {
+    case normal = "ic_statusBar"
 }
