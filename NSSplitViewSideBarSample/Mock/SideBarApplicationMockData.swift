@@ -17,19 +17,6 @@ enum SideBarApplicationMockData: Int, CaseIterable {
         return self.rawValue
     }
     
-    var backgroundColor: NSColor {
-        switch self {
-        case .translate:
-            return .blue
-        case .webtoon:
-            return .green
-        case .memo:
-            return .yellow
-        case .timer:
-            return .gray
-        }
-    }
-    
     var title: String {
         switch self {
         case .translate:
@@ -56,7 +43,33 @@ enum SideBarApplicationMockData: Int, CaseIterable {
         }
     }
     
+    var url: URL {
+        switch self {
+        case .translate:
+            return URL(string: "https://papago.naver.com")!
+        case .webtoon:
+            return URL(string: "https://m.comic.naver.com")!
+        case .memo:
+            return URL(string: "https://m.memo.naver.com")!
+        case .timer:
+            return URL(string: "https://vclock.com/timer")!
+        }
+    }
+    
+    var backgroundColor: NSColor {
+        switch self {
+        case .translate:
+            return .blue
+        case .webtoon:
+            return .green
+        case .memo:
+            return .yellow
+        case .timer:
+            return .gray
+        }
+    }
+    
     func getSideBarApplication() -> SideBarApplication {
-        return .init(id: self.id, title: self.title, logo: self.logo, backgroundColor: self.backgroundColor)
+        return .init(id: self.id, title: self.title, logo: self.logo, backgroundColor: self.backgroundColor, url: self.url)
     }
 }

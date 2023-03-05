@@ -47,9 +47,9 @@ extension StatusBarHelper {
         let menuItem = NSMenuItem()
         
         if let sideBarApplication = SideBarApplicaitonHelper.shared.getSideBarApplicaitonInfo(of: DBService.getStatusBarApplicationID()) {
-            let sideBarVC: SideBarApplicationViewController = SideBarApplicationViewController(application: .init(id: sideBarApplication.id, title: sideBarApplication.title, logo: sideBarApplication.logo, backgroundColor: sideBarApplication.backgroundColor))
+            let sideBarVC: SideBarApplicationViewController = SideBarApplicationViewController(application: sideBarApplication)
             self.sideBarApplicationVC = sideBarVC
-            sideBarVC.view.setFrameSize(.init(width: 400, height: 200))
+            sideBarVC.view.setFrameSize(.init(width: 400, height: 600))
             
             menuItem.view = sideBarVC.view
             menu.addItem(menuItem)

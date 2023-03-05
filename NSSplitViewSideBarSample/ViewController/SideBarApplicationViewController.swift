@@ -64,7 +64,7 @@ final class SideBarApplicationViewController: NSViewController {
     
     // MARK: - Configure
     private func configure() {
-        webView.load(URLRequest(url: URL(string: "https://www.naver.com")!))
+        webView.load(URLRequest(url: applicaiton.url))
         
         if DBService.getStatusBarApplicationID() == applicaiton.id {
             setStatusBarApplicaitonSwitch.state = .on
