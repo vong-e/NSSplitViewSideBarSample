@@ -31,6 +31,11 @@ final class DBService {
         UserDefaults.standard.set(appID, forKey: "StatusBarAppication")
     }
     
+    /// StatusBar에서 보여줄 application 에서 제거
+    static func deleteStatusBarAppication() {
+        UserDefaults.standard.removeObject(forKey: "StatusBarAppication")
+    }
+    
     /// StatusBar에서 보여줄 applicaiton의 ID를 가져옴
     /// - Returns: StatusBar applicaition의 ID
     static func getStatusBarApplicationID() -> SideBarApplicationID? {

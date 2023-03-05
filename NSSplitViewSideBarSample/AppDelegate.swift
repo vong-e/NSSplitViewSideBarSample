@@ -10,7 +10,7 @@ import Cocoa
 @main
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-    private let statusBarHelper = StatusBarHelper.shared//.initStatusBarItem()
+    private let statusBarHelper = StatusBarHelper.shared
     lazy var mainWindowController = MainWindowController()
 
 

@@ -6,12 +6,28 @@
 //
 
 import Cocoa
+import WebKit
 
 import RxCocoa
 import RxSwift
 import SnapKit
 
 final class SideBarApplicationViewController: NSViewController {
+    
+    private let webView = WKWebView()
+    
+    private let setStatusBarApplicationTextField: NSTextField = {
+        let textField = NSTextField(font: .systemFont(ofSize: 14), color: .getText(color: .primary))
+        textField.stringValue = "스테이터스바 애플리케이션 등록"
+        return textField
+    }()
+    
+    private let setStatusBarApplicaitonSwitch: NSSwitch = {
+        let toggleSwitch = NSSwitch()
+        toggleSwitch.state = .off
+        toggleSwitch.stringValue = "토글스위치"
+        return toggleSwitch
+    }()
     
     private let applicaiton: SideBarApplication
     
@@ -22,8 +38,6 @@ final class SideBarApplicationViewController: NSViewController {
     init(application: SideBarApplication) {
         self.applicaiton = application
         super.init(nibName: nil, bundle: nil)
-        binding()
-        print("Sidebar loaded")
     }
     
     required init?(coder: NSCoder) {
@@ -34,6 +48,55 @@ final class SideBarApplicationViewController: NSViewController {
     override func loadView() {
         let box = NSBox(fillColor: applicaiton.backgroundColor)
         self.view = box
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        configure()
+        addSubviews()
+        setConstraints()
+        binding()
+    }
+    
+    deinit {
+        webView.stopLoading()
+    }
+    
+    // MARK: - Configure
+    private func configure() {
+        webView.load(URLRequest(url: URL(string: "https://www.naver.com")!))
+        
+        if DBService.getStatusBarApplicationID() == applicaiton.id {
+            setStatusBarApplicaitonSwitch.state = .on
+        } else {
+            setStatusBarApplicaitonSwitch.state = .off
+        }
+        
+        setStatusBarApplicaitonSwitch.target = self
+        setStatusBarApplicaitonSwitch.action = #selector(setStatusBarApplicationSwitchAciton(_:))
+    }
+    
+    // MARK: - Set UI
+    private func addSubviews() {
+        self.view.addSubview(webView)
+        self.view.addSubview(setStatusBarApplicaitonSwitch)
+        self.view.addSubview(setStatusBarApplicationTextField)
+    }
+    
+    private func setConstraints() {
+        webView.snp.makeConstraints { make in
+            make.top.leading.trailing.equalToSuperview()
+            make.bottom.equalToSuperview().inset(50)
+        }
+        
+        setStatusBarApplicationTextField.snp.makeConstraints { make in
+            make.centerY.equalTo(setStatusBarApplicaitonSwitch.snp.centerY)
+        }
+        
+        setStatusBarApplicaitonSwitch.snp.makeConstraints { make in
+            make.leading.equalTo(setStatusBarApplicationTextField.snp.trailing).offset(10)
+            make.bottom.trailing.equalToSuperview().inset(10)
+        }
     }
     
     // MARK: - Binding
@@ -48,5 +111,17 @@ final class SideBarApplicationViewController: NSViewController {
                 DBService.setSideBarApplicaiton(width: width, appID: owner.applicaiton.id)
             })
             .disposed(by: disposeBag)
+    }
+    
+    @objc func setStatusBarApplicationSwitchAciton(_ sender: NSSwitch) {
+        switch sender.state {
+        case .on:
+            DBService.setStatusBarAppication(appID: applicaiton.id)
+        default: // Off, Mixed State
+            DBService.deleteStatusBarAppication()
+        }
+        
+        /// StatusBar Applicaiton 설정 이후 StatusBarMenu 리프레시
+        StatusBarHelper.shared.setStatusBarMenu()
     }
 }

@@ -78,7 +78,6 @@ final class SideBarViewController: NSViewController {
         sideBarAppStackView.snp.makeConstraints { make in
             make.width.equalTo(scrollView.snp.width)
         }
-        
     }
     
     private func setSideBar(applicaitonList: [SideBarApplication]) {

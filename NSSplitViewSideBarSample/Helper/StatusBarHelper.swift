@@ -46,16 +46,16 @@ extension StatusBarHelper {
         let menu = NSMenu()
         let menuItem = NSMenuItem()
         
-        guard let sideBarApplication = SideBarApplicaitonHelper.shared.getSideBarApplicaitonInfo(of: DBService.getStatusBarApplicationID()) else {
-            return
-        }
-        
-        let sideBarVC: SideBarApplicationViewController = SideBarApplicationViewController(application: .init(id: sideBarApplication.id, title: sideBarApplication.title, logo: sideBarApplication.logo, backgroundColor: sideBarApplication.backgroundColor))
-        self.sideBarApplicationVC = sideBarVC
-        sideBarVC.view.setFrameSize(.init(width: 400, height: 200))
-        
-        menuItem.view = sideBarVC.view
-        menu.addItem(menuItem)
+        if let sideBarApplication = SideBarApplicaitonHelper.shared.getSideBarApplicaitonInfo(of: DBService.getStatusBarApplicationID()) {
+            let sideBarVC: SideBarApplicationViewController = SideBarApplicationViewController(application: .init(id: sideBarApplication.id, title: sideBarApplication.title, logo: sideBarApplication.logo, backgroundColor: sideBarApplication.backgroundColor))
+            self.sideBarApplicationVC = sideBarVC
+            sideBarVC.view.setFrameSize(.init(width: 400, height: 200))
+            
+            menuItem.view = sideBarVC.view
+            menu.addItem(menuItem)
+        } else {
+            menu.addItem(withTitle: "설정된 StatusBar App이 없습니다.", action: nil, keyEquivalent: "")
+        }   
         
         self.statusItem.menu = menu
     }
