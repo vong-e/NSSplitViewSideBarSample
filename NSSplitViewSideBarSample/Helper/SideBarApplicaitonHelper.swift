@@ -53,6 +53,8 @@ final class SideBarApplicaitonHelper {
     /// - Parameter id: 가져올 side bar applicaiton의 ID
     /// - Returns: SideBar applicaiton 정보
     func getSideBarApplicaitonInfo(of id: SideBarApplicationID?) -> SideBarApplication? {
+        print("넘어온거: \(self.sideBarApplicationListRelay.value.first(where: { $0.id == id }))")
+//        print("lsit :\(sideBarApplicationListRelay.value)")
         return self.sideBarApplicationListRelay.value.first(where: { $0.id == id })
     }
 }

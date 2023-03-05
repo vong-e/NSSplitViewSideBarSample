@@ -36,6 +36,7 @@
 		E39C1BA529B3C56500337BBD /* SideBarApplicaitonHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39C1BA429B3C56500337BBD /* SideBarApplicaitonHelper.swift */; };
 		E39C1BA729B3C9CF00337BBD /* Rx+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39C1BA629B3C9CF00337BBD /* Rx+Extension.swift */; };
 		E39C1BA929B3DAA600337BBD /* SideBarApplicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39C1BA829B3DAA600337BBD /* SideBarApplicationViewController.swift */; };
+		E39C1BAF29B4078800337BBD /* StatusBarHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39C1BAE29B4078800337BBD /* StatusBarHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,7 @@
 		E39C1BA429B3C56500337BBD /* SideBarApplicaitonHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarApplicaitonHelper.swift; sourceTree = "<group>"; };
 		E39C1BA629B3C9CF00337BBD /* Rx+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rx+Extension.swift"; sourceTree = "<group>"; };
 		E39C1BA829B3DAA600337BBD /* SideBarApplicationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarApplicationViewController.swift; sourceTree = "<group>"; };
+		E39C1BAE29B4078800337BBD /* StatusBarHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -243,6 +245,7 @@
 			isa = PBXGroup;
 			children = (
 				E39C1BA429B3C56500337BBD /* SideBarApplicaitonHelper.swift */,
+				E39C1BAE29B4078800337BBD /* StatusBarHelper.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -394,6 +397,7 @@
 				E311337229AF955B0091A2D8 /* MainSplitViewController.swift in Sources */,
 				E367A32829B37F7C00848482 /* NSColor+Extension.swift in Sources */,
 				E39C1BA929B3DAA600337BBD /* SideBarApplicationViewController.swift in Sources */,
+				E39C1BAF29B4078800337BBD /* StatusBarHelper.swift in Sources */,
 				E367A32229B36FF600848482 /* SideBarApplicationView.swift in Sources */,
 				E39C1B9C29B3A7E200337BBD /* SideBarApplication.swift in Sources */,
 				E367A31C29B26FD700848482 /* SideBarApplicationMockData.swift in Sources */,

@@ -24,4 +24,16 @@ final class DBService {
     static func getSideBarApplicationWidth(of appID: SideBarApplicationID) -> CGFloat {
         return UserDefaults.standard.object(forKey: "SideBarApp_\(appID)_width") as? CGFloat ?? 300
     }
+    
+    /// StatusBar에서 보여줄 application 설정
+    /// - Parameter appID: 설정할 application의 ID
+    static func setStatusBarAppication(appID: SideBarApplicationID) {
+        UserDefaults.standard.set(appID, forKey: "StatusBarAppication")
+    }
+    
+    /// StatusBar에서 보여줄 applicaiton의 ID를 가져옴
+    /// - Returns: StatusBar applicaition의 ID
+    static func getStatusBarApplicationID() -> SideBarApplicationID? {
+        return UserDefaults.standard.object(forKey: "StatusBarAppication") as? SideBarApplicationID
+    }
 }

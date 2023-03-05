@@ -23,6 +23,7 @@ final class SideBarApplicationViewController: NSViewController {
         self.applicaiton = application
         super.init(nibName: nil, bundle: nil)
         binding()
+        print("Sidebar loaded")
     }
     
     required init?(coder: NSCoder) {
