@@ -79,7 +79,7 @@ final class MainSplitViewController: NSSplitViewController {
 
         let sideBarApplicationVCItem = sideBarApplicationViewController.toSplitViewItem()
         sideBarApplicationVCItem.minimumThickness = 300
-        print("sideBarApplicationVCItem ", sideBarApplicationVCItem.viewController.view.frame)
+        
         self.insertSplitViewItem(sideBarApplicationVCItem, at: 1)
         
         let sideBarApplicationWidth: CGFloat = DBService.getSideBarApplicationWidth(of: sideBarApplication.id)
