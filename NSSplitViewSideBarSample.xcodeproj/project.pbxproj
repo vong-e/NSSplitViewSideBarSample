@@ -21,6 +21,7 @@
 		E311338129AFCA200091A2D8 /* NSBox+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E311338029AFCA200091A2D8 /* NSBox+Extension.swift */; };
 		E311338329AFCA6B0091A2D8 /* WebViewContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E311338229AFCA6B0091A2D8 /* WebViewContentViewController.swift */; };
 		E311338729AFD7070091A2D8 /* SideBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E311338629AFD7070091A2D8 /* SideBarViewController.swift */; };
+		E33E7BAE29B4FEE700055190 /* NSTextField+Extenson.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33E7BAD29B4FEE700055190 /* NSTextField+Extenson.swift */; };
 		E367A31929B239DD00848482 /* NSImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E367A31829B239DD00848482 /* NSImage+Extension.swift */; };
 		E367A31C29B26FD700848482 /* SideBarApplicationMockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E367A31B29B26FD700848482 /* SideBarApplicationMockData.swift */; };
 		E367A31F29B2806100848482 /* FlippedClipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E367A31E29B2806100848482 /* FlippedClipView.swift */; };
@@ -74,6 +75,7 @@
 		E311338029AFCA200091A2D8 /* NSBox+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSBox+Extension.swift"; sourceTree = "<group>"; };
 		E311338229AFCA6B0091A2D8 /* WebViewContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewContentViewController.swift; sourceTree = "<group>"; };
 		E311338629AFD7070091A2D8 /* SideBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarViewController.swift; sourceTree = "<group>"; };
+		E33E7BAD29B4FEE700055190 /* NSTextField+Extenson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSTextField+Extenson.swift"; sourceTree = "<group>"; };
 		E367A31829B239DD00848482 /* NSImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSImage+Extension.swift"; sourceTree = "<group>"; };
 		E367A31B29B26FD700848482 /* SideBarApplicationMockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarApplicationMockData.swift; sourceTree = "<group>"; };
 		E367A31E29B2806100848482 /* FlippedClipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlippedClipView.swift; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 				E367A32329B3717200848482 /* NSView+Extension.swift */,
 				E367A32729B37F7C00848482 /* NSColor+Extension.swift */,
 				E39C1BA629B3C9CF00337BBD /* Rx+Extension.swift */,
+				E33E7BAD29B4FEE700055190 /* NSTextField+Extenson.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -402,6 +405,7 @@
 				E39C1B9C29B3A7E200337BBD /* SideBarApplication.swift in Sources */,
 				E367A31C29B26FD700848482 /* SideBarApplicationMockData.swift in Sources */,
 				E39C1BA529B3C56500337BBD /* SideBarApplicaitonHelper.swift in Sources */,
+				E33E7BAE29B4FEE700055190 /* NSTextField+Extenson.swift in Sources */,
 				E311338729AFD7070091A2D8 /* SideBarViewController.swift in Sources */,
 				E367A32429B3717200848482 /* NSView+Extension.swift in Sources */,
 				E311338329AFCA6B0091A2D8 /* WebViewContentViewController.swift in Sources */,
