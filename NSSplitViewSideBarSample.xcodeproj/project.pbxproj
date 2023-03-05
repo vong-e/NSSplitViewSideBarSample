@@ -8,12 +8,36 @@
 
 /* Begin PBXBuildFile section */
 		E311333D29AE7EC30091A2D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E311333C29AE7EC30091A2D8 /* AppDelegate.swift */; };
-		E311333F29AE7EC30091A2D8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E311333E29AE7EC30091A2D8 /* ViewController.swift */; };
 		E311334129AE7EC40091A2D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E311334029AE7EC40091A2D8 /* Assets.xcassets */; };
 		E311334429AE7EC40091A2D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E311334229AE7EC40091A2D8 /* Main.storyboard */; };
 		E311334F29AE7EC40091A2D8 /* NSSplitViewSideBarSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E311334E29AE7EC40091A2D8 /* NSSplitViewSideBarSampleTests.swift */; };
 		E311335929AE7EC40091A2D8 /* NSSplitViewSideBarSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E311335829AE7EC40091A2D8 /* NSSplitViewSideBarSampleUITests.swift */; };
 		E311335B29AE7EC40091A2D8 /* NSSplitViewSideBarSampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E311335A29AE7EC40091A2D8 /* NSSplitViewSideBarSampleUITestsLaunchTests.swift */; };
+		E311336E29AF93500091A2D8 /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E311336C29AF93500091A2D8 /* MainWindowController.swift */; };
+		E311336F29AF93500091A2D8 /* MainWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E311336D29AF93500091A2D8 /* MainWindowController.xib */; };
+		E311337229AF955B0091A2D8 /* MainSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E311337129AF955B0091A2D8 /* MainSplitViewController.swift */; };
+		E311337829AFC5840091A2D8 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = E311337729AFC5840091A2D8 /* SnapKit */; };
+		E311337D29AFC6AE0091A2D8 /* NSViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E311337C29AFC6AE0091A2D8 /* NSViewController+Extension.swift */; };
+		E311338129AFCA200091A2D8 /* NSBox+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E311338029AFCA200091A2D8 /* NSBox+Extension.swift */; };
+		E311338329AFCA6B0091A2D8 /* WebViewContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E311338229AFCA6B0091A2D8 /* WebViewContentViewController.swift */; };
+		E311338729AFD7070091A2D8 /* SideBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E311338629AFD7070091A2D8 /* SideBarViewController.swift */; };
+		E33E7BAE29B4FEE700055190 /* NSTextField+Extenson.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33E7BAD29B4FEE700055190 /* NSTextField+Extenson.swift */; };
+		E367A31929B239DD00848482 /* NSImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E367A31829B239DD00848482 /* NSImage+Extension.swift */; };
+		E367A31C29B26FD700848482 /* SideBarApplicationMockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E367A31B29B26FD700848482 /* SideBarApplicationMockData.swift */; };
+		E367A31F29B2806100848482 /* FlippedClipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E367A31E29B2806100848482 /* FlippedClipView.swift */; };
+		E367A32229B36FF600848482 /* SideBarApplicationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E367A32129B36FF600848482 /* SideBarApplicationView.swift */; };
+		E367A32429B3717200848482 /* NSView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E367A32329B3717200848482 /* NSView+Extension.swift */; };
+		E367A32629B37DE100848482 /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E367A32529B37DE100848482 /* Color.xcassets */; };
+		E367A32829B37F7C00848482 /* NSColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E367A32729B37F7C00848482 /* NSColor+Extension.swift */; };
+		E367A33229B3816900848482 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = E367A33129B3816900848482 /* RxCocoa */; };
+		E367A33429B3816900848482 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = E367A33329B3816900848482 /* RxRelay */; };
+		E367A33629B3816900848482 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E367A33529B3816900848482 /* RxSwift */; };
+		E39C1B9C29B3A7E200337BBD /* SideBarApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39C1B9B29B3A7E200337BBD /* SideBarApplication.swift */; };
+		E39C1BA229B3C16800337BBD /* DBService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39C1BA129B3C16800337BBD /* DBService.swift */; };
+		E39C1BA529B3C56500337BBD /* SideBarApplicaitonHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39C1BA429B3C56500337BBD /* SideBarApplicaitonHelper.swift */; };
+		E39C1BA729B3C9CF00337BBD /* Rx+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39C1BA629B3C9CF00337BBD /* Rx+Extension.swift */; };
+		E39C1BA929B3DAA600337BBD /* SideBarApplicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39C1BA829B3DAA600337BBD /* SideBarApplicationViewController.swift */; };
+		E39C1BAF29B4078800337BBD /* StatusBarHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39C1BAE29B4078800337BBD /* StatusBarHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +60,6 @@
 /* Begin PBXFileReference section */
 		E311333929AE7EC30091A2D8 /* NSSplitViewSideBarSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSSplitViewSideBarSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E311333C29AE7EC30091A2D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E311333E29AE7EC30091A2D8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E311334029AE7EC40091A2D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E311334329AE7EC40091A2D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E311334529AE7EC40091A2D8 /* NSSplitViewSideBarSample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NSSplitViewSideBarSample.entitlements; sourceTree = "<group>"; };
@@ -45,6 +68,27 @@
 		E311335429AE7EC40091A2D8 /* NSSplitViewSideBarSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NSSplitViewSideBarSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E311335829AE7EC40091A2D8 /* NSSplitViewSideBarSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSSplitViewSideBarSampleUITests.swift; sourceTree = "<group>"; };
 		E311335A29AE7EC40091A2D8 /* NSSplitViewSideBarSampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSSplitViewSideBarSampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E311336C29AF93500091A2D8 /* MainWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
+		E311336D29AF93500091A2D8 /* MainWindowController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindowController.xib; sourceTree = "<group>"; };
+		E311337129AF955B0091A2D8 /* MainSplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSplitViewController.swift; sourceTree = "<group>"; };
+		E311337C29AFC6AE0091A2D8 /* NSViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSViewController+Extension.swift"; sourceTree = "<group>"; };
+		E311338029AFCA200091A2D8 /* NSBox+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSBox+Extension.swift"; sourceTree = "<group>"; };
+		E311338229AFCA6B0091A2D8 /* WebViewContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewContentViewController.swift; sourceTree = "<group>"; };
+		E311338629AFD7070091A2D8 /* SideBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarViewController.swift; sourceTree = "<group>"; };
+		E33E7BAD29B4FEE700055190 /* NSTextField+Extenson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSTextField+Extenson.swift"; sourceTree = "<group>"; };
+		E367A31829B239DD00848482 /* NSImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSImage+Extension.swift"; sourceTree = "<group>"; };
+		E367A31B29B26FD700848482 /* SideBarApplicationMockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarApplicationMockData.swift; sourceTree = "<group>"; };
+		E367A31E29B2806100848482 /* FlippedClipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlippedClipView.swift; sourceTree = "<group>"; };
+		E367A32129B36FF600848482 /* SideBarApplicationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarApplicationView.swift; sourceTree = "<group>"; };
+		E367A32329B3717200848482 /* NSView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSView+Extension.swift"; sourceTree = "<group>"; };
+		E367A32529B37DE100848482 /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
+		E367A32729B37F7C00848482 /* NSColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSColor+Extension.swift"; sourceTree = "<group>"; };
+		E39C1B9B29B3A7E200337BBD /* SideBarApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarApplication.swift; sourceTree = "<group>"; };
+		E39C1BA129B3C16800337BBD /* DBService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBService.swift; sourceTree = "<group>"; };
+		E39C1BA429B3C56500337BBD /* SideBarApplicaitonHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarApplicaitonHelper.swift; sourceTree = "<group>"; };
+		E39C1BA629B3C9CF00337BBD /* Rx+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rx+Extension.swift"; sourceTree = "<group>"; };
+		E39C1BA829B3DAA600337BBD /* SideBarApplicationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarApplicationViewController.swift; sourceTree = "<group>"; };
+		E39C1BAE29B4078800337BBD /* StatusBarHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +96,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E367A33429B3816900848482 /* RxRelay in Frameworks */,
+				E367A33229B3816900848482 /* RxCocoa in Frameworks */,
+				E367A33629B3816900848482 /* RxSwift in Frameworks */,
+				E311337829AFC5840091A2D8 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,9 +143,17 @@
 		E311333B29AE7EC30091A2D8 /* NSSplitViewSideBarSample */ = {
 			isa = PBXGroup;
 			children = (
+				E39C1BA329B3C55500337BBD /* Helper */,
+				E39C1BA029B3C15500337BBD /* Service */,
+				E311336929AF90C70091A2D8 /* WindowController */,
+				E311337329AF955F0091A2D8 /* ViewController */,
+				E367A32029B2806A00848482 /* View */,
+				E367A31A29B26FC900848482 /* Model */,
+				E39C1B9D29B3A7EC00337BBD /* Mock */,
+				E311337B29AFC6990091A2D8 /* Extension */,
 				E311333C29AE7EC30091A2D8 /* AppDelegate.swift */,
-				E311333E29AE7EC30091A2D8 /* ViewController.swift */,
 				E311334029AE7EC40091A2D8 /* Assets.xcassets */,
+				E367A32529B37DE100848482 /* Color.xcassets */,
 				E311334229AE7EC40091A2D8 /* Main.storyboard */,
 				E311334529AE7EC40091A2D8 /* NSSplitViewSideBarSample.entitlements */,
 			);
@@ -121,6 +177,82 @@
 			path = NSSplitViewSideBarSampleUITests;
 			sourceTree = "<group>";
 		};
+		E311336929AF90C70091A2D8 /* WindowController */ = {
+			isa = PBXGroup;
+			children = (
+				E311336C29AF93500091A2D8 /* MainWindowController.swift */,
+				E311336D29AF93500091A2D8 /* MainWindowController.xib */,
+			);
+			path = WindowController;
+			sourceTree = "<group>";
+		};
+		E311337329AF955F0091A2D8 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E311337129AF955B0091A2D8 /* MainSplitViewController.swift */,
+				E311338229AFCA6B0091A2D8 /* WebViewContentViewController.swift */,
+				E311338629AFD7070091A2D8 /* SideBarViewController.swift */,
+				E39C1BA829B3DAA600337BBD /* SideBarApplicationViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		E311337B29AFC6990091A2D8 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				E311337C29AFC6AE0091A2D8 /* NSViewController+Extension.swift */,
+				E311338029AFCA200091A2D8 /* NSBox+Extension.swift */,
+				E367A31829B239DD00848482 /* NSImage+Extension.swift */,
+				E367A32329B3717200848482 /* NSView+Extension.swift */,
+				E367A32729B37F7C00848482 /* NSColor+Extension.swift */,
+				E39C1BA629B3C9CF00337BBD /* Rx+Extension.swift */,
+				E33E7BAD29B4FEE700055190 /* NSTextField+Extenson.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		E367A31A29B26FC900848482 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E39C1B9B29B3A7E200337BBD /* SideBarApplication.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E367A32029B2806A00848482 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E367A31E29B2806100848482 /* FlippedClipView.swift */,
+				E367A32129B36FF600848482 /* SideBarApplicationView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E39C1B9D29B3A7EC00337BBD /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				E367A31B29B26FD700848482 /* SideBarApplicationMockData.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		E39C1BA029B3C15500337BBD /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				E39C1BA129B3C16800337BBD /* DBService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		E39C1BA329B3C55500337BBD /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				E39C1BA429B3C56500337BBD /* SideBarApplicaitonHelper.swift */,
+				E39C1BAE29B4078800337BBD /* StatusBarHelper.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,6 +269,12 @@
 			dependencies = (
 			);
 			name = NSSplitViewSideBarSample;
+			packageProductDependencies = (
+				E311337729AFC5840091A2D8 /* SnapKit */,
+				E367A33129B3816900848482 /* RxCocoa */,
+				E367A33329B3816900848482 /* RxRelay */,
+				E367A33529B3816900848482 /* RxSwift */,
+			);
 			productName = NSSplitViewSideBarSample;
 			productReference = E311333929AE7EC30091A2D8 /* NSSplitViewSideBarSample.app */;
 			productType = "com.apple.product-type.application";
@@ -209,6 +347,10 @@
 				Base,
 			);
 			mainGroup = E311333029AE7EC30091A2D8;
+			packageReferences = (
+				E311337629AFC5840091A2D8 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				E367A33029B3816900848482 /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = E311333A29AE7EC30091A2D8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -226,6 +368,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E311334129AE7EC40091A2D8 /* Assets.xcassets in Resources */,
+				E367A32629B37DE100848482 /* Color.xcassets in Resources */,
+				E311336F29AF93500091A2D8 /* MainWindowController.xib in Resources */,
 				E311334429AE7EC40091A2D8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -251,8 +395,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E311333F29AE7EC30091A2D8 /* ViewController.swift in Sources */,
+				E311337D29AFC6AE0091A2D8 /* NSViewController+Extension.swift in Sources */,
+				E39C1BA229B3C16800337BBD /* DBService.swift in Sources */,
+				E311337229AF955B0091A2D8 /* MainSplitViewController.swift in Sources */,
+				E367A32829B37F7C00848482 /* NSColor+Extension.swift in Sources */,
+				E39C1BA929B3DAA600337BBD /* SideBarApplicationViewController.swift in Sources */,
+				E39C1BAF29B4078800337BBD /* StatusBarHelper.swift in Sources */,
+				E367A32229B36FF600848482 /* SideBarApplicationView.swift in Sources */,
+				E39C1B9C29B3A7E200337BBD /* SideBarApplication.swift in Sources */,
+				E367A31C29B26FD700848482 /* SideBarApplicationMockData.swift in Sources */,
+				E39C1BA529B3C56500337BBD /* SideBarApplicaitonHelper.swift in Sources */,
+				E33E7BAE29B4FEE700055190 /* NSTextField+Extenson.swift in Sources */,
+				E311338729AFD7070091A2D8 /* SideBarViewController.swift in Sources */,
+				E367A32429B3717200848482 /* NSView+Extension.swift in Sources */,
+				E311338329AFCA6B0091A2D8 /* WebViewContentViewController.swift in Sources */,
 				E311333D29AE7EC30091A2D8 /* AppDelegate.swift in Sources */,
+				E311338129AFCA200091A2D8 /* NSBox+Extension.swift in Sources */,
+				E367A31F29B2806100848482 /* FlippedClipView.swift in Sources */,
+				E39C1BA729B3C9CF00337BBD /* Rx+Extension.swift in Sources */,
+				E367A31929B239DD00848482 /* NSImage+Extension.swift in Sources */,
+				E311336E29AF93500091A2D8 /* MainWindowController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,7 +595,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.vongtory.NSSplitViewSideBarSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -461,7 +623,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.vongtory.NSSplitViewSideBarSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -581,6 +743,48 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E311337629AFC5840091A2D8 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		E367A33029B3816900848482 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E311337729AFC5840091A2D8 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E311337629AFC5840091A2D8 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		E367A33129B3816900848482 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E367A33029B3816900848482 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		E367A33329B3816900848482 /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E367A33029B3816900848482 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		E367A33529B3816900848482 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E367A33029B3816900848482 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E311333129AE7EC30091A2D8 /* Project object */;
 }
