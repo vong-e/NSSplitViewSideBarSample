@@ -15,6 +15,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
+        
+        for key in UserDefaults.standard.dictionaryRepresentation().keys {
+            UserDefaults.standard.removeObject(forKey: key.description)
+        }
+        UserDefaults.standard.synchronize()
+        
+        
+        
         mainWindowCoordinator = MainWindowCoordinator(mainWindowController: .init())
         mainWindowCoordinator?.start()
         statusBarHelper.initStatusBarItem()

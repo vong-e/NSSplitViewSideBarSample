@@ -7,6 +7,8 @@
 
 import Cocoa
 
+import Cocoa
+
 final class MainWindowController: NSWindowController {
 
     // MARK: - Initialize
@@ -17,11 +19,5 @@ final class MainWindowController: NSWindowController {
     // MARK: - Life Cycle
     override func windowDidLoad() {
         super.windowDidLoad()
-        configure()
-    }
-    
-    // MARK: - Configure
-    private func configure() {
-        self.contentViewController = MainSplitViewController()
     }
 }

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		E30297DE29B8FFBE001FFBD2 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30297DD29B8FFBE001FFBD2 /* Coordinator.swift */; };
 		E30297E029B90032001FFBD2 /* MainWindowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30297DF29B90032001FFBD2 /* MainWindowCoordinator.swift */; };
+		E30297E229B9012D001FFBD2 /* MainSplitCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30297E129B9012D001FFBD2 /* MainSplitCoordinator.swift */; };
 		E311333D29AE7EC30091A2D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E311333C29AE7EC30091A2D8 /* AppDelegate.swift */; };
 		E311334129AE7EC40091A2D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E311334029AE7EC40091A2D8 /* Assets.xcassets */; };
 		E311334429AE7EC40091A2D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E311334229AE7EC40091A2D8 /* Main.storyboard */; };
@@ -62,6 +63,7 @@
 /* Begin PBXFileReference section */
 		E30297DD29B8FFBE001FFBD2 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		E30297DF29B90032001FFBD2 /* MainWindowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindowCoordinator.swift; sourceTree = "<group>"; };
+		E30297E129B9012D001FFBD2 /* MainSplitCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSplitCoordinator.swift; sourceTree = "<group>"; };
 		E311333929AE7EC30091A2D8 /* NSSplitViewSideBarSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSSplitViewSideBarSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E311333C29AE7EC30091A2D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E311334029AE7EC40091A2D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 			children = (
 				E30297DD29B8FFBE001FFBD2 /* Coordinator.swift */,
 				E30297DF29B90032001FFBD2 /* MainWindowCoordinator.swift */,
+				E30297E129B9012D001FFBD2 /* MainSplitCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -428,6 +431,7 @@
 				E311338129AFCA200091A2D8 /* NSBox+Extension.swift in Sources */,
 				E367A31F29B2806100848482 /* FlippedClipView.swift in Sources */,
 				E39C1BA729B3C9CF00337BBD /* Rx+Extension.swift in Sources */,
+				E30297E229B9012D001FFBD2 /* MainSplitCoordinator.swift in Sources */,
 				E367A31929B239DD00848482 /* NSImage+Extension.swift in Sources */,
 				E311336E29AF93500091A2D8 /* MainWindowController.swift in Sources */,
 				E30297DE29B8FFBE001FFBD2 /* Coordinator.swift in Sources */,

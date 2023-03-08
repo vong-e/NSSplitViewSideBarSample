@@ -13,9 +13,18 @@ final class MainWindowCoordinator: Coordinator {
     
     init(mainWindowController: MainWindowController) {
         self.mainWindowController = mainWindowController
+        
+        setMainSplitCoordinator()
     }
     
     func start() {
         mainWindowController.showWindow(nil)
+    }
+    
+    func setMainSplitCoordinator() {
+        let mainSplitCoordinator = MainSplitCoordinator(windowController: mainWindowController)
+        childCoordinators.append(mainSplitCoordinator)
+        
+        mainSplitCoordinator.start()
     }
 }
