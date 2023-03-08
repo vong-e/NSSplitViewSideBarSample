@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E30297DE29B8FFBE001FFBD2 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30297DD29B8FFBE001FFBD2 /* Coordinator.swift */; };
+		E30297E029B90032001FFBD2 /* MainWindowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30297DF29B90032001FFBD2 /* MainWindowCoordinator.swift */; };
 		E311333D29AE7EC30091A2D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E311333C29AE7EC30091A2D8 /* AppDelegate.swift */; };
 		E311334129AE7EC40091A2D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E311334029AE7EC40091A2D8 /* Assets.xcassets */; };
 		E311334429AE7EC40091A2D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E311334229AE7EC40091A2D8 /* Main.storyboard */; };
@@ -60,6 +61,7 @@
 
 /* Begin PBXFileReference section */
 		E30297DD29B8FFBE001FFBD2 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		E30297DF29B90032001FFBD2 /* MainWindowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindowCoordinator.swift; sourceTree = "<group>"; };
 		E311333929AE7EC30091A2D8 /* NSSplitViewSideBarSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSSplitViewSideBarSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E311333C29AE7EC30091A2D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E311334029AE7EC40091A2D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				E30297DD29B8FFBE001FFBD2 /* Coordinator.swift */,
+				E30297DF29B90032001FFBD2 /* MainWindowCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -411,6 +414,7 @@
 				E311337229AF955B0091A2D8 /* MainSplitViewController.swift in Sources */,
 				E367A32829B37F7C00848482 /* NSColor+Extension.swift in Sources */,
 				E39C1BA929B3DAA600337BBD /* SideBarApplicationViewController.swift in Sources */,
+				E30297E029B90032001FFBD2 /* MainWindowCoordinator.swift in Sources */,
 				E39C1BAF29B4078800337BBD /* StatusBarHelper.swift in Sources */,
 				E367A32229B36FF600848482 /* SideBarApplicationView.swift in Sources */,
 				E39C1B9C29B3A7E200337BBD /* SideBarApplication.swift in Sources */,
