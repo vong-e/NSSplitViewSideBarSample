@@ -18,14 +18,13 @@ final class SideBarApplicationViewController: NSViewController {
     
     private let setStatusBarApplicationTextField: NSTextField = {
         let textField = NSTextField(font: .systemFont(ofSize: 14), color: .getText(color: .primary))
-        textField.stringValue = "스테이터스바 애플리케이션 등록"
+        textField.stringValue = "스테이터스바 애플리케이션으로 등록"
         return textField
     }()
     
     private let setStatusBarApplicaitonSwitch: NSSwitch = {
         let toggleSwitch = NSSwitch()
         toggleSwitch.state = .off
-        toggleSwitch.stringValue = "토글스위치"
         return toggleSwitch
     }()
     
