@@ -11,16 +11,24 @@ import Cocoa
 class AppDelegate: NSObject, NSApplicationDelegate {
 
     private let statusBarHelper = StatusBarHelper.shared
-    lazy var mainWindowController = MainWindowController()
+    var mainWindowCoordinator: MainWindowCoordinator?
 
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        mainWindowController.showWindow(nil)
+        
+        for key in UserDefaults.standard.dictionaryRepresentation().keys {
+            UserDefaults.standard.removeObject(forKey: key.description)
+        }
+        UserDefaults.standard.synchronize()
+        
+        
+        
+        mainWindowCoordinator = MainWindowCoordinator(mainWindowController: .init())
+        mainWindowCoordinator?.start()
         statusBarHelper.initStatusBarItem()
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
-        // Insert code here to tear down your application
     }
 
     func applicationShouldHandleReopen(_ sender: NSApplication, hasVisibleWindows flag: Bool) -> Bool {
@@ -28,7 +36,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             return true
         }
         
-        mainWindowController.showWindow(nil)
+        mainWindowCoordinator?.start()
         return false
     }
     
@@ -36,4 +44,3 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         return true
     }
 }
-
