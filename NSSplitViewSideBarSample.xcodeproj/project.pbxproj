@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E30297DE29B8FFBE001FFBD2 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30297DD29B8FFBE001FFBD2 /* Coordinator.swift */; };
 		E311333D29AE7EC30091A2D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E311333C29AE7EC30091A2D8 /* AppDelegate.swift */; };
 		E311334129AE7EC40091A2D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E311334029AE7EC40091A2D8 /* Assets.xcassets */; };
 		E311334429AE7EC40091A2D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E311334229AE7EC40091A2D8 /* Main.storyboard */; };
@@ -58,6 +59,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E30297DD29B8FFBE001FFBD2 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		E311333929AE7EC30091A2D8 /* NSSplitViewSideBarSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSSplitViewSideBarSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E311333C29AE7EC30091A2D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E311334029AE7EC40091A2D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -120,6 +122,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E30297DC29B8FFB1001FFBD2 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				E30297DD29B8FFBE001FFBD2 /* Coordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
 		E311333029AE7EC30091A2D8 = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +153,7 @@
 		E311333B29AE7EC30091A2D8 /* NSSplitViewSideBarSample */ = {
 			isa = PBXGroup;
 			children = (
+				E30297DC29B8FFB1001FFBD2 /* Coordinator */,
 				E39C1BA329B3C55500337BBD /* Helper */,
 				E39C1BA029B3C15500337BBD /* Service */,
 				E311336929AF90C70091A2D8 /* WindowController */,
@@ -415,6 +426,7 @@
 				E39C1BA729B3C9CF00337BBD /* Rx+Extension.swift in Sources */,
 				E367A31929B239DD00848482 /* NSImage+Extension.swift in Sources */,
 				E311336E29AF93500091A2D8 /* MainWindowController.swift in Sources */,
+				E30297DE29B8FFBE001FFBD2 /* Coordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
